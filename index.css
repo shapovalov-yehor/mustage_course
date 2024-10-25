@@ -775,3 +775,33 @@ body {
   padding-right: 16px;
   color: #271351;
 }
+
+.students-result {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1275px;
+}
+
+.students-result__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.students-result__card-list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.students-result__card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 8px;
+  border-radius: 24px;
+  background: linear-gradient(96.85deg, #915eff 0%, #6732d9 100%);
+}
