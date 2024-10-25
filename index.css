@@ -805,3 +805,38 @@ body {
   border-radius: 24px;
   background: linear-gradient(96.85deg, #915eff 0%, #6732d9 100%);
 }
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 1418px;
+}
+
+.answer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1048px;
+}
+
+.answer__card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 40px;
+  gap: 24px;
+  border-radius: 40px;
+  background: radial-gradient(100% 116.67% at 0% 100%, #5424bd 0%, #1f1f1f 70.04%);
+}
+
+.answer__card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.answer__card-description {
+  max-width: 770px;
+}
