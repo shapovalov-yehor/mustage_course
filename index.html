@@ -1299,21 +1299,70 @@
         </section>
 
         <section class="container">
-          <div class="slider">
+          <div class="slider relative">
             <span class="text-headline-1" style="max-width: 1007px">
               Читай відгуки про наш курс, <span class="text-primary">98% учнів</span> залишаються дуже
               <span class="text-primary">задоволеними</span>
             </span>
 
-            <div class="column gap-40">
-              <div class="column gap-24"></div>
+            <div class="column column__center gap-40">
+              <div class="column gap-24">
+                <div class="slider-2">
+                  <div class="slider-wrapper">
+                    <div class="slide">
+                      <img class="img" src="./assets/images/IMG_1431.png" />
+                    </div>
+                    <div class="slide">
+                      <img class="img" src="./assets/images/IMG_1432.png" />
+                    </div>
+                    <div class="slide">
+                      <img class="img" src="./assets/images/IMG_1433.png" />
+                    </div>
+                    <div class="slide">
+                      <img class="img" src="./assets/images/IMG_1434.png" />
+                    </div>
+                    <div class="slide">
+                      <img class="img" src="./assets/images/IMG_1436.png" />
+                    </div>
+                    <div class="slide">
+                      <img class="img" src="./assets/images/IMG_1437.png" />
+                    </div>
+                    <div class="slide">
+                      <img class="img" src="./assets/images/IMG_1438.png" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row row__center gap-40">
+                  <button class="slider__button" onclick="moveToSlide(currentIndex - 1)">
+                    <i class="fi fi-xs fi-sr-angle-left"></i>
+                  </button>
+
+                  <div class="row row__align-center gap-16">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                  </div>
+
+                  <button class="slider__button" onclick="moveToSlide(currentIndex + 1)">
+                    <i class="fi fi-xs fi-sr-angle-right"></i>
+                  </button>
+                </div>
+              </div>
 
               <div class="slider__pill">
                 <span class="text-body-1">
-                  Переглянути більше відгуків можеш тут - <span class="text-bold">https://t.me/+M-Uvil3shJk2NTcy</span>
+                  Переглянути більше відгуків можеш тут -
+                  <a href="https://t.me/+M-Uvil3shJk2NTcy" class="link text-bold">https://t.me/+M-Uvil3shJk2NTcy</a>
                 </span>
               </div>
             </div>
+
+            <div class="slider__gradient background-radial-gradient"></div>
           </div>
         </section>
 
@@ -1561,5 +1610,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>
