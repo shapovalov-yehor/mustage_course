@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header relative">
       <div class="header__content">
         <div class="header__top">
           <img src="./assets/images/logo.svg" width="208px" height="56px" alt="Mustage logo" />
@@ -35,7 +35,7 @@
             <div class="header-round-block">
               <img src="./assets/icons/translation.svg" alt="Translate icon" />
               <button class="button button__ghost">RU</button>
-              <button class="button button__ghost">UA</button>
+              <button class="button button__ghost button__ghost--active">UA</button>
             </div>
 
             <button class="button button__rounded">
@@ -49,42 +49,54 @@
           <span class="text-headline-1">
             Навчись знаходити прибуткові зв’язки та лити на гемблу всього за 21 день
           </span>
+
           <span class="text-body-2 text-medium" style="width: 568px">
             Даємо можливість опанувати арбітраж трафіку БЕЗКОШТОВНО, заощадити на розхідниках більше 250 доларів та
             потрапити в нашу команду Mustage Friends
           </span>
-          <button class="button button__secondary">Твій успішний старт</button>
+
+          <button class="button button__secondary">
+            <span>Твій успішний старт</span>
+          </button>
         </div>
 
         <div class="header__bottom">
           <div class="header__info">
-            <div class="info-block">
-              <span class="text-headline-3 text-nowrap"> Без зайвих витрат: </span>
-              <span class="text-body-3 text-medium text-nowrap"> купуєте тільки розхідники </span>
+            <div class="column gap-8">
+              <span class="underline-animation text-headline-3 text-nowrap">Без зайвих витрат:</span>
+              <span class="text-body-3 text-medium text-nowrap">купуєте тільки розхідники</span>
             </div>
 
             <div class="divider--vertical"></div>
 
-            <div class="info-block">
-              <span class="text-headline-3 text-nowrap"> Професійна підтримка баєрів: </span>
-              <span class="text-body-3 text-medium text-nowrap"> майже 24/7 </span>
+            <div class="column gap-8">
+              <span class="underline-animation text-headline-3 text-nowrap">Професійна підтримка баєрів:</span>
+              <span class="text-body-3 text-medium text-nowrap">майже 24/7</span>
             </div>
 
             <div class="divider--vertical"></div>
 
-            <div class="info-block">
-              <span class="text-headline-3 text-nowrap"> Закрите ком'юніті: </span>
-              <span class="text-body-3 text-medium text-nowrap"> додаткові фічі після курсу </span>
+            <div class="column gap-8">
+              <span class="underline-animation text-headline-3 text-nowrap">Закрите ком'юніті:</span>
+              <span class="text-body-3 text-medium text-nowrap">додаткові фічі після курсу</span>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="header__image-container">
+        <img
+          class="header__image"
+          src="./assets/images/4de0a600-457d-4945-9f0a-57c716f037bc 1.png"
+          alt="Header image"
+        />
       </div>
     </header>
 
     <main>
       <article class="article">
         <section class="advantage">
-          <div class="advantage__title">
+          <div class="row row__right w-100">
             <span class="text-headline-1 text-right">
               <span>Не зволікай,</span><br />
               на тебе чекає багато «плюшок»
@@ -92,14 +104,14 @@
           </div>
 
           <div class="advantage__content">
-            <div class="advantage-item__list">
+            <div class="column gap-16">
               <div class="advantage-item">
                 <div class="advantage-item__image-wrapper">
                   <img class="advantage-item__image" src="./assets/images/Puzzles.png" alt="Pazzle image" />
                   <div class="advantage-item__image-blur"></div>
                 </div>
 
-                <div class="advantage-item__content">
+                <div class="column gap-16">
                   <span class="text-headline-3 text-bold"> Продумана система навчання з практичним досвідом </span>
                   <span class="text-body-3 text-medium">
                     Навчимо усьому, що потрібно для успішного старту в арбітражі. Пройдучи весь шлях з нуля з нами, ти
@@ -115,7 +127,7 @@
                   <div class="advantage-item__image-blur"></div>
                 </div>
 
-                <div class="advantage-item__content">
+                <div class="column gap-16">
                   <span class="text-headline-3 text-bold"> Доступи до каналу і чату свого потоку </span>
                   <span class="text-body-3 text-medium">
                     Будеш проходити курс з однодумцями: нетворкати, обмінюватися досвідом, швидко вирішувати проблеми.
@@ -130,7 +142,7 @@
                   <div class="advantage-item__image-blur"></div>
                 </div>
 
-                <div class="advantage-item__content">
+                <div class="column gap-16">
                   <span class="text-headline-3 text-bold"> Зручний конект через Telegram </span>
                   <span class="text-body-3 text-medium">
                     Всі навчальні матеріали публікуватимемо на каналі потоку. Домашки і тести будеш здавати через бота,
@@ -145,7 +157,7 @@
                   <div class="advantage-item__image-blur"></div>
                 </div>
 
-                <div class="advantage-item__content">
+                <div class="column gap-16">
                   <span class="text-headline-3 text-bold"> 2 зідзвони з крутими наставниками в Zoom </span>
                   <span class="text-body-3 text-medium">
                     Зможеш поспілкуватися з ТОПовими баєрами нашої команди і поставити їм будь-які питання про тонкощі
@@ -160,7 +172,7 @@
                   <div class="advantage-item__image-blur"></div>
                 </div>
 
-                <div class="advantage-item__content">
+                <div class="column gap-16">
                   <span class="text-headline-3 text-bold"> Оперативний та чуйний сапорт </span>
                   <span class="text-body-3 text-medium">
                     Щось не так з домашкою, не виходить прив'язати карти до акаунтів, додати проксі в антидетект браузер
@@ -176,7 +188,7 @@
                   <div class="advantage-item__image-blur"></div>
                 </div>
 
-                <div class="advantage-item__content">
+                <div class="column gap-16">
                   <span class="text-headline-3 text-bold"> Можливість потрапити в команду для кожного </span>
                   <span class="text-body-3 text-medium">
                     Наполегливо навчаєшся – проявляєш активність у чаті – ідеш далі, незважаючи на невдачі – прагнеш до
@@ -191,7 +203,7 @@
           <div class="advantage-action">
             <button class="button button__primary">
               Зареєструватися на курс
-              <img src="./assets/icons/right-arrow.svg" alt="Arrow right" />
+              <img class="icon-md" src="./assets/icons/right-arrow.svg" alt="Arrow right" />
             </button>
           </div>
         </section>
@@ -206,7 +218,7 @@
               </span>
             </div>
 
-            <div class="privilege__content">
+            <div class="column gap-16">
               <div class="privilege__note">
                 <div class="privilege__note-pill">
                   <span class="text-body-1 text-medium text-nowrap"> Наш курс БЕЗКОШТОВНИЙ </span>
@@ -251,7 +263,7 @@
         </section>
 
         <section class="calculate">
-          <div class="calculate__title">
+          <div class="container calculate__title">
             <span class="text-headline-1 text-right" style="max-width: 1168px">
               Припустимо, що ти вирішив купити розхідники самостійно
             </span>
@@ -355,7 +367,7 @@
 
           <div class="experience__content">
             <div class="experience__panel-list">
-              <div class="experience__panel-column">
+              <div class="column gap-24">
                 <div class="experience__panel-row">
                   <div class="experience__panel">
                     <img class="experience__icon" src="./assets/icons/time-and-date.png" alt="Time icon" />
@@ -417,8 +429,10 @@
 
               <div class="experience__general-panel-action">
                 <button class="button button__secondary">
-                  Хочу приєднатись
-                  <i class="fi fi-sm fi-sr-arrow-right"></i>
+                  <div class="row row__align-center gap-8">
+                    Хочу приєднатись
+                    <i class="fi fi-sm fi-sr-arrow-right"></i>
+                  </div>
                 </button>
               </div>
             </div>
@@ -1185,7 +1199,9 @@
                   </ul>
                 </div>
 
-                <button class="button button__secondary row__center">Дізнатися ціну</button>
+                <button class="button button__secondary row__center">
+                  <span>Дізнатися ціну</span>
+                </button>
               </div>
 
               <div class="tariff__card">
@@ -1209,7 +1225,9 @@
                   </ul>
                 </div>
 
-                <button class="button button__secondary row__center">Дізнатися ціну</button>
+                <button class="button button__secondary row__center">
+                  <span>Дізнатися ціну</span>
+                </button>
               </div>
 
               <div class="tariff__card">
@@ -1228,7 +1246,9 @@
                   </ul>
                 </div>
 
-                <button class="button button__secondary row__center">Дізнатися ціну</button>
+                <button class="button button__secondary row__center">
+                  <span>Дізнатися ціну</span>
+                </button>
               </div>
             </div>
           </div>
@@ -1243,7 +1263,7 @@
             </div>
 
             <div class="students-result__content">
-              <div class="students-result__card-list">
+              <div class="row gap-40">
                 <div class="students-result__card">
                   <span class="text-body-3"><span class="text-bold">ГЕО:</span> Турція</span>
                   <span class="text-body-3"><span class="text-bold">Статистика:</span> 31 рега/7 депов</span>
@@ -1278,7 +1298,24 @@
           </div>
         </section>
 
-        <section class="container"></section>
+        <section class="container">
+          <div class="slider">
+            <span class="text-headline-1" style="max-width: 1007px">
+              Читай відгуки про наш курс, <span class="text-primary">98% учнів</span> залишаються дуже
+              <span class="text-primary">задоволеними</span>
+            </span>
+
+            <div class="column gap-40">
+              <div class="column gap-24"></div>
+
+              <div class="slider__pill">
+                <span class="text-body-1">
+                  Переглянути більше відгуків можеш тут - <span class="text-bold">https://t.me/+M-Uvil3shJk2NTcy</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section class="container">
           <div class="answer">
@@ -1404,9 +1441,125 @@
           </div>
         </section>
 
-        <section></section>
-        <section></section>
+        <section class="spinner__wrapper">
+          <div class="spinner">
+            <div class=""></div>
+            <span class="text-headline-3">* один із сервісів, до якого надаємо доступ на вибір</span>
+          </div>
+        </section>
+
+        <section class="register__wrapper">
+          <div class="register relative">
+            <span class="text-headline-1" style="max-width: 898px">
+              Залишились питання? Заповнюй форму, ми відповімо протягом 30 хвилин.
+            </span>
+
+            <div class="column gap-40">
+              <form method="POST" action="" class="register__form">
+                <div class="column gap-32">
+                  <span class="text-headline-3 text-center">Форма</span>
+
+                  <div class="divider"></div>
+
+                  <div class="column gap-8">
+                    <label for="username" class="text-body-3">Введіть ім'я</label>
+                    <div class="form__input-wrapper">
+                      <input type="text" id="username" name="username" placeholder="Ім'я" class="form__input" />
+                    </div>
+                  </div>
+
+                  <div class="column gap-8">
+                    <label for="phone" class="text-body-3">Введіть номер телефону</label>
+                    <div class="form__input-wrapper">
+                      <input type="text" id="phone" name="phone" placeholder="+ 00 000 00 00 000" class="form__input" />
+                    </div>
+                  </div>
+
+                  <div class="column gap-8">
+                    <label for="nickname" class="text-body-3">Введіть нікнейм у Телеграм</label>
+                    <div class="form__input-wrapper">
+                      <input type="text" id="nickname" name="nickname" placeholder="@nickname" class="form__input" />
+                    </div>
+                  </div>
+                </div>
+
+                <button class="button button__secondary row__center" type="submit">Зареєструватися</button>
+              </form>
+
+              <div class="row row__center gap-32">
+                <a href="" alt="Telegram">
+                  <img class="icon-lg" src="./assets/icons/telegram.png" alt="Telegram" />
+                </a>
+
+                <a href="" alt="Youtube">
+                  <img class="icon-lg" src="./assets/icons/youtube.png" alt="Youtube" />
+                </a>
+
+                <a href="" alt="Tiktok">
+                  <img class="icon-lg" src="./assets/icons/tiktok.png" alt="Tiktok" />
+                </a>
+              </div>
+            </div>
+
+            <img class="register__logo" src="./assets/images/logo.png" alt="Logo" />
+          </div>
+        </section>
       </article>
     </main>
+
+    <footer class="row row__center">
+      <div class="footer">
+        <div class="footer__content">
+          <div class="column justify-content-between gap-24">
+            <div class="column gap-24">
+              <img src="./assets/images/logo.svg" width="208px" height="56px" alt="Mustage logo" />
+
+              <button class="button button__rounded">
+                Написать нам
+                <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" />
+              </button>
+            </div>
+
+            <div class="row gap-8">
+              <img src="./assets/icons/translation.svg" alt="Translate icon" />
+              <button class="button button__ghost">RU</button>
+              <button class="button button__ghost button__ghost--active">UA</button>
+            </div>
+          </div>
+
+          <nav class="column" style="gap: 56px">
+            <div class="column gap-24">
+              <span class="text-body-3 text-bold">Меню</span>
+
+              <div class="column gap-16">
+                <a href="#" class="nav__footer-link">Переваги</a>
+                <a href="#" class="nav__footer-link">Про нас</a>
+                <a href="#" class="nav__footer-link">Програма</a>
+                <a href="#" class="nav__footer-link">Відгуки</a>
+                <a href="#" class="nav__footer-link">FAQ</a>
+              </div>
+            </div>
+
+            <a href="#" class="nav__footer-link">Політика конфіденційності</a>
+          </nav>
+        </div>
+
+        <div class="column h-100">
+          <div class="row row__center gap-32">
+            <a href="" alt="Telegram">
+              <img class="icon-lg" src="./assets/icons/telegram.png" alt="Telegram" />
+            </a>
+
+            <a href="" alt="Youtube">
+              <img class="icon-lg" src="./assets/icons/youtube.png" alt="Youtube" />
+            </a>
+
+            <a href="" alt="Tiktok">
+              <img class="icon-lg" src="./assets/icons/tiktok.png" alt="Tiktok" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
