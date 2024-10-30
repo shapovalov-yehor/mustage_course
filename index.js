@@ -42,34 +42,42 @@ const prizes = [
   {
     title: "Підписка на місяць безкоштовно",
     color: "#1F1F1F",
+    i18nKey: "spinner.spins.subscribe",
   },
   {
     title: "Проксі в подарунок",
     color: "#6732D9",
+    i18nKey: "spinner.spins.proxy",
   },
   {
     title: "Інтерв'ю з Вусатим",
     color: "#1F1F1F",
+    i18nKey: "spinner.spins.interview",
   },
   {
     title: "Знижка 15% на розхідники",
     color: "#6732D9",
+    i18nKey: "spinner.spins.sale",
   },
   {
     title: "1 крео в подарунок",
     color: "#1F1F1F",
+    i18nKey: "spinner.spins.creo",
   },
   {
     title: "Доступ до приватного чату",
     color: "#6732D9",
+    i18nKey: "spinner.spins.chat",
   },
   {
     title: "+1 зідзвон з наставником",
     color: "#1F1F1F",
+    i18nKey: "spinner.spins.call",
   },
   {
     title: "Акаунт 7-денного фарму в подарунок",
     color: "#6732D9",
+    i18nKey: "spinner.spins.account",
   },
 ];
 
@@ -93,12 +101,12 @@ let currentSlice = 0;
 let prizeNodes;
 
 const createPrizeNodes = () => {
-  prizes.forEach(({ title, color, reaction }, i) => {
+  prizes.forEach(({ title, color, i18nKey, reaction }, i) => {
     const rotation = prizeSlice * i * -1 - prizeOffset;
     spinner.insertAdjacentHTML(
       "beforeend",
       `<li class="prize" data-reaction=${reaction} style="--rotate: ${rotation}deg">
-        <span class="text">${title}</span>
+        <span class="text" data-i18n="${i18nKey}">${title}</span>
       </li>`
     );
   });
