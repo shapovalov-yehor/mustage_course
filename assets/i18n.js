@@ -39,6 +39,8 @@ function changeLanguage(lang) {
   setLanguage(lang);
 
   i18next.changeLanguage(lang, () => {
+    $("#username").attr("placeholder", $.t("register.short_name"));
+
     rerender();
   });
 }
@@ -46,7 +48,7 @@ function changeLanguage(lang) {
 $(async function () {
   await i18next.use(i18nextBrowserLanguageDetector).init(
     {
-      debug: true,
+      debug: false,
       fallbackLng: "uk",
       resources: {
         uk: {
@@ -620,6 +622,7 @@ $(async function () {
               title: "Залишились питання? Заповнюй форму, ми відповімо протягом 30 хвилин.",
               form_title: "Форма",
               name: "Введіть ім'я",
+              short_name: "Ім'я",
               phone: "Введіть номер телефону",
               tg: "Введіть нікнейм у Телеграм",
               register: "Зареєструватися",
@@ -1203,6 +1206,7 @@ $(async function () {
               title: "Остались вопросы? Заполняй форму, мы ответим в течение 30 минут.",
               form_title: "Форма",
               name: "Введите имя",
+              short_name: "Имя",
               phone: "Введите номер телефона",
               tg: "Введите никнейм в Телеграмм",
               register: "Зарегистрироваться",

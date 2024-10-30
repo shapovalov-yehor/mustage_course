@@ -479,6 +479,7 @@ body {
   animation: dissolve 300ms ease-out forwards;
 }
 
+.nav__link:active,
 .nav__link--active {
   background: #f7f7f7;
   color: #0d0d0d;
