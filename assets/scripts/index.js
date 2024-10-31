@@ -161,7 +161,10 @@ const selectPrize = () => {
 
 trigger.addEventListener("click", () => {
   trigger.disabled = true;
-  rotation = Math.floor(Math.random() * 360 + spinertia(2000, 5000));
+  // For random sector win
+  // rotation = Math.floor(Math.random() * 360 + spinertia(2000, 5000));
+  // For current sector win (8 - sector)
+  rotation = prizes.length * 360 + (8 - 1) * prizeSlice + Math.floor(Math.random() * 40);
   prizeNodes.forEach((prize) => prize.classList.remove(selectedClass));
   wheel.classList.add(spinClass);
   spinner.style.setProperty("--rotate", rotation);
