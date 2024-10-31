@@ -79,6 +79,28 @@ function disableTransition(list) {
   });
 }
 
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.querySelector(".modal__close");
+const slideImages = document.querySelectorAll(".slide img.active");
+
+slideImages.forEach((img) => {
+  img.addEventListener("click", function () {
+    modal.style.display = "flex";
+    modalImg.src = this.src;
+  });
+});
+
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
 const prizes = [
   {
     title: "Підписка на місяць безкоштовно",
