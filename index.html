@@ -6,7 +6,7 @@
 
     <title>Mustage course</title>
 
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,7 +40,7 @@
               </button>
             </div>
 
-            <button class="button button__rounded">
+            <button class="button button__rounded" onclick="redirectClick();">
               <span data-i18n="header.write_to_us">Написати нам</span>
               <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" />
             </button>
@@ -57,7 +57,7 @@
             потрапити в нашу команду Mustage Friends
           </span>
 
-          <button class="button button__secondary">
+          <button class="button button__secondary" onclick="redirectClick();">
             <span data-i18n="header.button">Твій успішний старт</span>
           </button>
         </div>
@@ -227,7 +227,7 @@
           </div>
 
           <div class="advantage-action">
-            <button class="button button__primary">
+            <button class="button button__primary" onclick="redirectClick();">
               <span data-i18n="advantage.register"> Зареєструватися на курс </span>
               <img class="icon-md" src="./assets/icons/right-arrow.svg" alt="Arrow right" />
             </button>
@@ -465,7 +465,7 @@
               </div>
 
               <div class="experience__general-panel-action">
-                <button class="button button__secondary">
+                <button class="button button__secondary" onclick="redirectClick();">
                   <div class="row row__align-center">
                     <span data-i18n="experience.join">Хочу приєднатись</span>
                     <i class="fi fi-sm fi-sr-arrow-right"></i>
@@ -1412,7 +1412,7 @@
                   </ul>
                 </div>
 
-                <button class="button button__secondary row__center">
+                <button class="button button__secondary row__center" onclick="redirectClick();">
                   <span data-i18n="tariff.price">Дізнатися ціну</span>
                 </button>
               </div>
@@ -1442,7 +1442,7 @@
                   </ul>
                 </div>
 
-                <button class="button button__secondary row__center">
+                <button class="button button__secondary row__center" onclick="redirectClick();">
                   <span data-i18n="tariff.price">Дізнатися ціну</span>
                 </button>
               </div>
@@ -1469,7 +1469,7 @@
                   </ul>
                 </div>
 
-                <button class="button button__secondary row__center">
+                <button class="button button__secondary row__center" onclick="redirectClick();">
                   <span data-i18n="tariff.price">Дізнатися ціну</span>
                 </button>
               </div>
@@ -1789,7 +1789,7 @@
             </span>
 
             <div class="column gap-40">
-              <form method="POST" action="" class="register__form">
+              <form id="register_form" class="register__form">
                 <div class="column gap-32">
                   <span class="text-headline-3 text-center" data-i18n="register.form_title">Форма</span>
 
@@ -1817,7 +1817,12 @@
                   </div>
                 </div>
 
-                <button class="button button__secondary row__center" type="submit" data-i18n="register.register">
+                <button
+                  id="register"
+                  class="button button__secondary row__center"
+                  type="submit"
+                  data-i18n="register.register"
+                >
                   Зареєструватися
                 </button>
               </form>
@@ -1850,7 +1855,7 @@
             <div class="column gap-24">
               <img src="./assets/images/logo.svg" width="208px" height="56px" alt="Mustage logo" />
 
-              <button class="button button__rounded">
+              <button class="button button__rounded" onclick="redirectClick();">
                 <span data-i18n="header.write_to_us">Написать нам</span>
                 <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" />
               </button>
@@ -1905,7 +1910,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
 
-    <script src="./assets/i18n.js"></script>
-    <script src="./index.js"></script>
+    <script src="./assets/scripts/i18n.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+    <script src="./assets/scripts/message-utils.js"></script>
   </body>
 </html>
