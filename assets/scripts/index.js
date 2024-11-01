@@ -15,23 +15,36 @@ const updatedSlides = document.querySelectorAll(".slide");
 moveToSlide(currentIndex);
 
 function moveToSlide(index) {
+  const windowWidth = window.innerWidth;
+  const isSmallDimension = windowWidth > 320 && windowWidth < 992;
+
   updatedSlides.forEach((slide, i) => {
     slide.classList.remove("active");
     const img = slide.querySelector("img");
     img.classList.remove("active");
 
-    if (i === index || i === index + 1 || i === index - 1) {
-      img.classList.add("active");
-      slide.classList.add("active");
+    if (isSmallDimension) {
+      if (i === index) {
+        img.classList.add("active");
+        slide.classList.add("active");
+      }
+    } else {
+      if (i === index || i === index + 1 || i === index - 1) {
+        img.classList.add("active");
+        slide.classList.add("active");
+      }
     }
   });
 
-  const widthContainer = 705;
-  const widthActiveSlide = 320;
-  const widthUnActiveSlide = 240;
-  const countLeftSlide = index - 1;
+  const widthContainer = isSmallDimension ? windowWidth : 705;
+  const widthActiveSlide = isSmallDimension ? 260 : 320;
+  const widthUnActiveSlide = isSmallDimension ? 165 : 240;
+  const countLeftSlide = isSmallDimension ? index : index - 1;
 
-  const translateX = widthContainer - (widthActiveSlide + widthActiveSlide / 2 + widthUnActiveSlide * countLeftSlide);
+  const translateX = isSmallDimension
+    ? widthContainer / 2 - (widthActiveSlide / 2 + widthUnActiveSlide * countLeftSlide)
+    : widthContainer - (widthActiveSlide + widthActiveSlide / 2 + widthUnActiveSlide * countLeftSlide);
+
   sliderWrapper.style.transform = `translateX(${translateX}px)`;
 
   currentIndex = index;
@@ -82,10 +95,14 @@ function disableTransition(list) {
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
 const closeBtn = document.querySelector(".modal__close");
-const slideImages = document.querySelectorAll(".slide img.active");
+const slideImages = document.querySelectorAll(".slide img");
 
 slideImages.forEach((img) => {
   img.addEventListener("click", function () {
+    if (!img.classList.contains("active")) {
+      return;
+    }
+
     modal.style.display = "flex";
     modalImg.src = this.src;
   });
@@ -244,3 +261,36 @@ spinner.addEventListener("transitionend", () => {
   spinner.style.setProperty("--rotate", rotation);
   trigger.disabled = false;
 });
+
+const menuModal = document.getElementById("menu");
+const openModalBtn = document.getElementById("menu-open");
+const closeModal = document.getElementById("menu-close");
+const links = document.querySelectorAll(".menu__link");
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeMenu();
+  });
+});
+
+openModalBtn.addEventListener("click", () => {
+  menuModal.classList.add("header__menu--active");
+  openModalBtn.style.display = "none";
+  document.body.style.overflow = "hidden";
+});
+
+closeModal.addEventListener("click", () => {
+  closeMenu();
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeMenu();
+  }
+});
+
+function closeMenu() {
+  menuModal.classList.remove("header__menu--active");
+  openModalBtn.style.display = "flex";
+  document.body.style.overflow = "";
+}

@@ -18,10 +18,10 @@
   </head>
 
   <body>
-    <header class="header relative">
-      <div class="header__content">
+    <header class="header">
+      <div class="header__content relative">
         <div class="header__top">
-          <img src="./assets/images/logo.svg" width="208px" height="56px" alt="Mustage logo" />
+          <img class="header__logo" src="./assets/images/logo.svg" alt="Mustage logo" />
 
           <div class="nav__wrapper">
             <nav class="nav">
@@ -45,6 +45,10 @@
               <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" />
             </button>
           </div>
+
+          <button id="menu-open" class="button button__rounded header__menu-open">
+            <i class="fi fi-xs fi-sr-menu-burger"></i>
+          </button>
         </div>
 
         <div class="header__main">
@@ -52,7 +56,7 @@
             Навчись знаходити прибуткові зв’язки та лити на гемблу всього за 21 день
           </span>
 
-          <span class="text-body-2 text-medium" style="width: 568px" data-i18n="header.description">
+          <span class="header__main-description text-body-2 text-medium" data-i18n="header.description">
             Даємо можливість опанувати арбітраж трафіку БЕЗКОШТОВНО, заощадити на розхідниках більше 250 доларів та
             потрапити в нашу команду Mustage Friends
           </span>
@@ -64,58 +68,102 @@
 
         <div class="header__bottom">
           <div class="header__info">
-            <div class="column gap-8">
-              <span class="underline-animation text-headline-3 text-nowrap" data-i18n="header.no_costs.title">
+            <div class="header__info-item">
+              <span
+                class="header__info-item-title underline-animation text-headline-3"
+                data-i18n="header.no_costs.title"
+              >
                 Без зайвих витрат:
               </span>
-              <span class="text-body-3 text-medium text-nowrap" data-i18n="header.no_costs.description">
+              <span class="header__info-item-description text-body-3" data-i18n="header.no_costs.description">
                 купуєте тільки розхідники
               </span>
             </div>
 
-            <div class="divider--vertical"></div>
+            <div class="divider--vertical divider--hidden"></div>
 
-            <div class="column gap-8">
-              <span class="underline-animation text-headline-3 text-nowrap" data-i18n="header.support.title">
-                Професійна підтримка баєрів:
+            <div class="header__info-item">
+              <span
+                class="header__info-item-title underline-animation text-headline-3"
+                data-i18n="header.community.title"
+              >
+                Закрите ком'юніті:
               </span>
-              <span class="text-body-3 text-medium text-nowrap" data-i18n="header.support.description">
-                майже 24/7
+              <span class="header__info-item-description text-body-3" data-i18n="header.community.description">
+                додаткові фічі після курсу
               </span>
             </div>
 
-            <div class="divider--vertical"></div>
+            <div class="divider--vertical divider--hidden"></div>
 
-            <div class="column gap-8">
-              <span class="underline-animation text-headline-3 text-nowrap" data-i18n="header.community.title">
-                Закрите ком'юніті:
+            <div class="header__info-item">
+              <span
+                class="header__info-item-title underline-animation text-headline-3"
+                data-i18n="header.support.title"
+              >
+                Професійна підтримка баєрів:
               </span>
-              <span class="text-body-3 text-medium text-nowrap" data-i18n="header.community.description">
-                додаткові фічі після курсу
+              <span class="header__info-item-description text-body-3" data-i18n="header.support.description">
+                майже 24/7
               </span>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="header__image-container">
-        <img
-          class="header__image"
-          src="./assets/images/4de0a600-457d-4945-9f0a-57c716f037bc 1.png"
-          alt="Header image"
-        />
+        <div class="header__image-container">
+          <img
+            class="header__image"
+            src="./assets/images/4de0a600-457d-4945-9f0a-57c716f037bc 1.png"
+            alt="Header image"
+          />
+        </div>
+
+        <div id="menu" class="header__menu">
+          <div class="header__menu-content">
+            <div class="column gap-32">
+              <img class="header__logo" src="./assets/images/logo.svg" alt="Mustage logo" />
+
+              <div class="column gap-16">
+                <a href="#advantage" class="menu__link" data-i18n="nav.advantage">Переваги</a>
+                <a href="#about" class="menu__link" data-i18n="nav.about">Про нас</a>
+                <a href="#program" class="menu__link" data-i18n="nav.program">Програма</a>
+                <a href="#feedback" class="menu__link" data-i18n="nav.reviews">Відгуки</a>
+                <a href="#faq" class="menu__link" data-i18n="nav.faq">FAQ</a>
+              </div>
+
+              <div class="row gap-8">
+                <img src="./assets/icons/translation.svg" alt="Translate icon" />
+                <button id="header_ru" class="button button__ghost" onclick="changeLanguage('ru')">RU</button>
+                <button
+                  id="header_uk"
+                  class="button button__ghost button__ghost--active"
+                  onclick="changeLanguage('uk')"
+                >
+                  UA
+                </button>
+              </div>
+            </div>
+
+            <button class="button button__rounded" onclick="redirectClick();">
+              <span data-i18n="header.write_to_us">Написати нам</span>
+              <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" />
+            </button>
+          </div>
+
+          <button id="menu-close" class="button button__rounded header__menu-close">
+            <i class="fi fi-xs fi-sr-cross"></i>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
       <article class="article">
         <section class="advantage">
-          <div class="row row__right w-100">
-            <a name="advantage" class="text-headline-1 text-right">
-              <span data-i18n="advantage.title_start">Не зволікай,</span><br />
-              <span data-i18n="advantage.title_end">на тебе чекає багато «плюшок»</span>
-            </a>
-          </div>
+          <a name="advantage" class="advantage__title text-headline-1 text-right">
+            <span data-i18n="advantage.title_start">Не зволікай,</span>
+            <span data-i18n="advantage.title_end">на тебе чекає багато «плюшок»</span>
+          </a>
 
           <div class="advantage__content">
             <div class="column gap-16">
@@ -237,13 +285,17 @@
         <section class="container">
           <div class="privilege">
             <div class="">
-              <span class="text-headline-1">
-                <span data-i18n="privilege.title.start"> Окрім того, ти зможеш </span><br />
-                <span class="text-primary" data-i18n="privilege.title.save"> зекономити </span>
-                <span data-i18n="privilege.title.walker"> на розхідниках </span><br />
-                <span data-i18n="and"> і </span>
-                <span class="text-primary" data-i18n="privilege.title.max"> по максимуму </span>
-                <span data-i18n="privilege.title.end"> вкластися в трафік </span>
+              <span class="privilege__title text-headline-1">
+                <span data-i18n="privilege.title.start"> Окрім того, ти зможеш </span>
+                <span>
+                  <span class="text-primary" data-i18n="privilege.title.save"> зекономити </span>
+                  <span data-i18n="privilege.title.walker"> на розхідниках </span>
+                </span>
+                <span>
+                  <span data-i18n="and"> і </span>
+                  <span class="text-primary" data-i18n="privilege.title.max"> по максимуму </span>
+                  <span data-i18n="privilege.title.end"> вкластися в трафік </span>
+                </span>
               </span>
             </div>
 
@@ -262,31 +314,32 @@
                 </span>
               </div>
 
-              <div class="privilege__arrow-block">
-                <img src="./assets/images/Vector 2.png" alt="Left arrow" />
-                <img src="./assets/images/Vector 3.png" alt="Right arrow" />
-              </div>
-
-              <div class="privilege__card-list">
-                <div class="privilege__card privilege__card--outline">
-                  <span class="text-headline-3" data-i18n="privilege.step1.title">1. Шлях спроб та помилок </span>
-                  <span class="text-body-3" data-i18n="privilege.step1.description">
-                    Існує безліч сервісів для арбітражу. Щоб знайти серед них оптимальні, ти можеш витратити купу часу і
-                    грошей. Інколи у людей іде на це > 1 000$, ще й не всі рішення бувають якісні.
-                  </span>
+              <div class="privilege__step-list">
+                <div class="privilege__step">
+                  <img class="privilege__arrow" src="./assets/images/Vector 2.png" alt="Left arrow" />
+                  <div class="privilege__card privilege__card--outline">
+                    <span class="text-headline-3" data-i18n="privilege.step1.title">1. Шлях спроб та помилок </span>
+                    <span class="text-body-3" data-i18n="privilege.step1.description">
+                      Існує безліч сервісів для арбітражу. Щоб знайти серед них оптимальні, ти можеш витратити купу часу
+                      і грошей. Інколи у людей іде на це > 1 000$, ще й не всі рішення бувають якісні.
+                    </span>
+                  </div>
                 </div>
 
-                <div class="relative privilege__card privilege__card--primary">
-                  <div class="privilege__top-change privilege__mark">
-                    <span class="text-body-3" data-i18n="privilege.top"> ТОП вибір </span>
-                    <img src="./assets/icons/shines.png" alt="Shiens" width="24px" height="24px" />
-                  </div>
+                <div class="privilege__step">
+                  <img class="privilege__arrow" src="./assets/images/Vector 3.png" alt="Right arrow" />
+                  <div class="relative privilege__card privilege__card--primary">
+                    <div class="privilege__top-change privilege__mark">
+                      <span class="text-body-3" data-i18n="privilege.top"> ТОП вибір </span>
+                      <img src="./assets/icons/shines.png" alt="Shiens" width="24px" height="24px" />
+                    </div>
 
-                  <span class="text-headline-3" data-i18n="privilege.step2.title">2. Вигідне готове рішення </span>
-                  <span class="text-body-3" data-i18n="privilege.step2.description">
-                    Ми пройшли перший шлях замість тебе, підготували паки з найкращими рішеннями на ринку з суттєвими
-                    знижками. Бери, користуйся, економ свій час і гроші.
-                  </span>
+                    <span class="text-headline-3" data-i18n="privilege.step2.title">2. Вигідне готове рішення </span>
+                    <span class="text-body-3" data-i18n="privilege.step2.description">
+                      Ми пройшли перший шлях замість тебе, підготували паки з найкращими рішеннями на ринку з суттєвими
+                      знижками. Бери, користуйся, економ свій час і гроші.
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -307,6 +360,14 @@
               <div class="calculate__list">
                 <div class="calculate__list-item">
                   <div class="calculate__pill">
+                    <i class="fi fi-sr-navigation"></i>
+                    <span class="text-headline-3" data-i18n="calculate.autobay"> Автозалив </span>
+                  </div>
+                  <span class="text-headline-3">$ 100</span>
+                </div>
+
+                <div class="calculate__list-item">
+                  <div class="calculate__pill">
                     <i class="fi fi-sr-mode-portrait"></i>
                     <span class="text-headline-3 text-medium" data-i18n="calculate.kings"> Кінги і самореги </span>
                   </div>
@@ -315,56 +376,48 @@
 
                 <div class="calculate__list-item">
                   <div class="calculate__pill">
-                    <i class="fi fi-sr-graduation-cap"></i>
-                    <span class="text-headline-3 text-medium" data-i18n="calculate.mentor">Наставник</span>
-                  </div>
-                  <span class="text-headline-3">$ ∞</span>
-                </div>
-
-                <div class="calculate__list-item">
-                  <div class="calculate__pill">
-                    <i class="fi fi-sr-picture"></i>
-                    <span class="text-headline-3 text-medium" data-i18n="calculate.creo"> Крео </span>
-                  </div>
-                  <span class="text-headline-3">$ 50</span>
-                </div>
-
-                <div class="calculate__list-item">
-                  <div class="calculate__pill">
-                    <i class="fi fi-sr-navigation"></i>
-                    <span class="text-headline-3 text-medium" data-i18n="calculate.autobay"> Автозалив </span>
-                  </div>
-                  <span class="text-headline-3">$ 100</span>
-                </div>
-
-                <div class="calculate__list-item">
-                  <div class="calculate__pill">
-                    <img src="./assets/icons/keitaro.png" alt="Keitaro icon" />
-                    <span class="text-headline-3 text-medium" data-i18n="calculate.treker"> Трекер Keitaro </span>
-                  </div>
-                  <span class="text-headline-3">$ 50</span>
-                </div>
-
-                <div class="calculate__list-item">
-                  <div class="calculate__pill">
-                    <img src="./assets/icons/logo_square 1.png" alt="Spay icon" />
-                    <span class="text-headline-3 text-medium" data-i18n="calculate.spay"> Спай </span>
-                  </div>
-                  <span class="text-headline-3">$ 70</span>
-                </div>
-
-                <div class="calculate__list-item">
-                  <div class="calculate__pill">
-                    <img src="./assets/icons/86055416 1.png" alt="Antic icon" />
-                    <span class="text-headline-3 text-medium" data-i18n="calculate.antik"> Антик </span>
+                    <img class="calculate__icon" src="./assets/icons/86055416 1.png" alt="Antic icon" />
+                    <span class="text-headline-3" data-i18n="calculate.antik"> Антик </span>
                   </div>
                   <span class="text-headline-3">$ 89</span>
                 </div>
 
                 <div class="calculate__list-item">
                   <div class="calculate__pill">
+                    <i class="fi fi-sr-graduation-cap"></i>
+                    <span class="text-headline-3" data-i18n="calculate.mentor">Наставник</span>
+                  </div>
+                  <span class="text-headline-3">$ ∞</span>
+                </div>
+
+                <div class="calculate__list-item">
+                  <div class="calculate__pill">
+                    <img class="calculate__icon--long" src="./assets/icons/keitaro.png" alt="Keitaro icon" />
+                    <span class="text-headline-3" data-i18n="calculate.treker"> Трекер Keitaro </span>
+                  </div>
+                  <span class="text-headline-3">$ 50</span>
+                </div>
+
+                <div class="calculate__list-item">
+                  <div class="calculate__pill">
+                    <img class="calculate__icon" src="./assets/icons/logo_square 1.png" alt="Spay icon" />
+                    <span class="text-headline-3" data-i18n="calculate.spay"> Спай </span>
+                  </div>
+                  <span class="text-headline-3">$ 70</span>
+                </div>
+
+                <div class="calculate__list-item">
+                  <div class="calculate__pill">
+                    <i class="fi fi-sr-picture"></i>
+                    <span class="text-headline-3" data-i18n="calculate.creo"> Крео </span>
+                  </div>
+                  <span class="text-headline-3">$ 50</span>
+                </div>
+
+                <div class="calculate__list-item">
+                  <div class="calculate__pill">
                     <i class="fi fi-sr-wifi-alt"></i>
-                    <span class="text-headline-3 text-medium" data-i18n="calculate.proxi"> Проксі на місяць </span>
+                    <span class="text-headline-3" data-i18n="calculate.proxi"> Проксі на місяць </span>
                   </div>
                   <span class="text-headline-3">$ 35</span>
                 </div>
@@ -399,10 +452,10 @@
           </div>
 
           <div class="experience__content">
-            <div class="experience__panel-list">
-              <div class="column gap-24">
+            <div class="experience__panel-list-wrapper">
+              <div class="experience__panel-list">
                 <div class="experience__panel-row">
-                  <div class="experience__panel">
+                  <div class="experience__panel experience__panel-column">
                     <img class="experience__icon" src="./assets/icons/time-and-date.png" alt="Time icon" />
                     <span class="text-body-3 text-medium" data-i18n="experience.experience">
                       Ми варимося в арбітражі трафіку вже 4 роки. За цей час протестували величезну кількість шляхів,
@@ -410,7 +463,7 @@
                     </span>
                   </div>
 
-                  <div class="experience__panel">
+                  <div class="experience__panel experience__panel-column">
                     <img class="experience__icon" src="./assets/icons/loading.png" alt="Loading icon" />
                     <span class="text-body-3 text-medium" data-i18n="experience.system">
                       Успішно розвиваємо цілу систему, що включає 8 проєктів, до яких входять публічні та закриті
@@ -451,7 +504,7 @@
             </div>
 
             <div class="experience__general-panel">
-              <img src="./assets/images/logo.png" alt="Logo" width="144px" height="119px" />
+              <img class="experience__general-panel-icon" src="./assets/images/logo.png" alt="Logo" />
 
               <div class="column gap-16">
                 <span class="text-body-1 text-medium" data-i18n="experience.description.start">
@@ -466,8 +519,8 @@
 
               <div class="experience__general-panel-action">
                 <button class="button button__secondary" onclick="redirectClick();">
-                  <div class="row row__align-center">
-                    <span data-i18n="experience.join">Хочу приєднатись</span>
+                  <div class="row row__align-center gap-8">
+                    <label data-i18n="experience.join">Хочу приєднатись</label>
                     <i class="fi fi-sm fi-sr-arrow-right"></i>
                   </div>
                 </button>
@@ -742,11 +795,9 @@
 
         <section class="whom__wrapper">
           <div class="whom">
-            <div class="whom_title">
-              <div class="column">
-                <span class="text-headline-1" data-i18n="whom.title.start">Кожен візьме з курсу те, що</span>
-                <span class="text-headline-1" data-i18n="whom.title.end">йому найбільше потрібно</span>
-              </div>
+            <div class="whom__title">
+              <span class="text-headline-1" data-i18n="whom.title.start">Кожен візьме з курсу те, що</span>
+              <span class="text-headline-1" data-i18n="whom.title.end">йому найбільше потрібно</span>
             </div>
 
             <div class="whom__content">
@@ -829,9 +880,9 @@
               </a>
             </div>
 
-            <div class="column gap-24">
+            <div class="course-program__list">
               <div class="course-program__card">
-                <div class="row gap-16">
+                <div class="course-program__pill-list">
                   <div class="course-program__pill text-body-3 text-medium" data-i18n="course_program.block_1.material">
                     1 година 29 хвилин відеоматеріалу
                   </div>
@@ -849,7 +900,7 @@
 
                 <div class="column gap-24">
                   <div class="divider"></div>
-                  <div class="row row__align-center gap-16">
+                  <div class="row gap-16">
                     <img class="icon-md" src="./assets/icons/check.png" alt="Check icon" />
                     <span class="text-body-3 text-bold text-nowrap" data-i18n="course_program.block_1.lesson_1.title">
                       Урок 1.1
@@ -909,7 +960,7 @@
               </div>
 
               <div class="course-program__card">
-                <div class="row gap-16">
+                <div class="course-program__pill-list">
                   <div class="course-program__pill text-body-3 text-medium" data-i18n="course_program.block_2.material">
                     1 година 39 хвилин відеоматеріалу
                   </div>
@@ -986,7 +1037,7 @@
               </div>
 
               <div class="course-program__card">
-                <div class="row gap-16">
+                <div class="course-program__pill-list">
                   <div class="course-program__pill text-body-3 text-medium" data-i18n="course_program.block_3.material">
                     1 година 19 хвилин відеоматеріалу
                   </div>
@@ -1052,7 +1103,7 @@
               </div>
 
               <div class="course-program__card">
-                <div class="row gap-16">
+                <div class="course-program__pill-list">
                   <div class="course-program__pill text-body-3 text-medium" data-i18n="course_program.block_4.material">
                     52 хвилини відеоматеріалу
                   </div>
@@ -1108,7 +1159,7 @@
               </div>
 
               <div class="course-program__card">
-                <div class="row gap-16">
+                <div class="course-program__pill-list">
                   <div class="course-program__pill text-body-3 text-medium" data-i18n="course_program.block_5.material">
                     44 хвилини відеоматеріалу
                   </div>
@@ -1186,7 +1237,7 @@
               </div>
 
               <div class="course-program__card">
-                <div class="row gap-16">
+                <div class="course-program__pill-list">
                   <div class="course-program__pill text-body-3 text-medium" data-i18n="course_program.block_6.material">
                     54 хвилини відеоматеріалу
                   </div>
@@ -1263,7 +1314,7 @@
               </div>
 
               <div class="course-program__card">
-                <div class="row gap-16">
+                <div class="course-program__pill-list">
                   <div class="course-program__pill text-body-3 text-medium" data-i18n="course_program.block_7.material">
                     48 хвилини відеоматеріалу
                   </div>
@@ -1296,7 +1347,7 @@
               </div>
 
               <div class="course-program__card">
-                <div class="row gap-16">
+                <div class="course-program__pill-list">
                   <div class="course-program__pill text-body-3 text-medium" data-i18n="course_program.block_8.material">
                     37 хвилин відеоматеріалу
                   </div>
@@ -1360,7 +1411,7 @@
               </span>
             </div>
 
-            <div class="row gap-32">
+            <div class="tariff__list">
               <div class="tariff__card">
                 <div class="column gap-16">
                   <span class="text-headline-3" data-i18n="tariff.free.title">Безкоштовний</span>
@@ -1486,7 +1537,7 @@
             </div>
 
             <div class="students-result__content">
-              <div class="row gap-40">
+              <div class="student__card-list">
                 <div class="students-result__card">
                   <span class="text-body-3">
                     <span class="text-bold" data-i18n="students_result.geo">ГЕО:</span>
@@ -1559,7 +1610,7 @@
 
         <section class="container">
           <div class="slider relative">
-            <a name="feedback" class="text-headline-1" style="max-width: 1007px">
+            <a name="feedback" class="slider__title text-headline-1" style="max-width: 1007px">
               <span data-i18n="slider.title"> Читай відгуки про наш курс,</span>
               <span class="text-primary" data-i18n="slider.student">98% учнів</span>
               <span data-i18n="slider.remain">залишаються дуже</span>
@@ -1594,12 +1645,12 @@
                   </div>
                 </div>
 
-                <div class="row row__center gap-40">
+                <div class="slider__action">
                   <button class="slider__button" onclick="moveToSlide(currentIndex - 1)">
                     <i class="fi fi-xs fi-sr-angle-left"></i>
                   </button>
 
-                  <div class="row row__align-center gap-16">
+                  <div class="slider__action-dot">
                     <span class="dot" onclick="moveToSlide(6)"></span>
                     <span class="dot" onclick="moveToSlide(7)"></span>
                     <span class="dot" onclick="moveToSlide(8)"></span>
@@ -1775,9 +1826,9 @@
 
                 <ul class="spinner"></ul>
 
-                <div class="ticker">
-                  <img src="./assets/images/triangle.png" alt="Ticker" width="118px" height="118px" />
-                </div>
+                <!-- <div class="ticker"> -->
+                <img class="ticker" src="./assets/images/triangle.png" alt="Ticker" />
+                <!-- </div> -->
               </div>
 
               <span class="text-headline-3" data-i18n="spinner.note">
@@ -1795,7 +1846,7 @@
 
             <div class="column gap-40">
               <form id="register_form" class="register__form">
-                <div class="column gap-32">
+                <div class="register__form-content">
                   <span class="text-headline-3 text-center" data-i18n="register.form_title">Форма</span>
 
                   <div class="divider"></div>
@@ -1832,7 +1883,7 @@
                 </button>
               </form>
 
-              <div class="row row__center gap-32">
+              <div class="register__social">
                 <a href="https://t.me/mustage_channel" alt="Telegram">
                   <img class="icon-lg" src="./assets/icons/telegram.svg" alt="Telegram" />
                 </a>
@@ -1853,11 +1904,11 @@
       </article>
     </main>
 
-    <footer class="row row__center">
+    <footer class="footer__wrapper">
       <div class="footer">
         <div class="footer__content">
           <div class="column justify-content-between gap-24">
-            <div class="column gap-24">
+            <div class="column gap-24" style="align-items: flex-start">
               <img src="./assets/images/logo.svg" width="208px" height="56px" alt="Mustage logo" />
 
               <button class="button button__rounded" onclick="redirectClick();">
@@ -1866,8 +1917,8 @@
               </button>
             </div>
 
-            <div class="row gap-8">
-              <img src="./assets/icons/translation.svg" alt="Translate icon" />
+            <div class="footer__language">
+              <img class="icon-md" src="./assets/icons/translation.svg" alt="Translate icon" />
               <button id="footer_ru" class="button button__ghost" onclick="changeLanguage('ru')">RU</button>
               <button id="footer_uk" class="button button__ghost button__ghost--active" onclick="changeLanguage('uk')">
                 UA
@@ -1877,7 +1928,7 @@
 
           <nav class="column" style="gap: 56px">
             <div class="column gap-24">
-              <span class="text-body-3 text-bold" data-i18n="nav.title">Меню</span>
+              <span class="text-body-3 text-bold footer__nav-title" data-i18n="nav.title">Меню</span>
 
               <div class="column gap-16">
                 <a href="#advantage" class="nav__footer-link" data-i18n="nav.advantage">Переваги</a>
@@ -1892,8 +1943,8 @@
           </nav>
         </div>
 
-        <div class="column h-100">
-          <div class="row row__center gap-32">
+        <div class="footer__social">
+          <div class="footer__social-content">
             <a href="https://t.me/mustage_channel" alt="Telegram">
               <img class="icon-lg" src="./assets/icons/telegram.svg" alt="Telegram" />
             </a>
