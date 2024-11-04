@@ -100,6 +100,11 @@ body {
   width: 100%;
 }
 
+.icon-sm {
+  width: 16px;
+  height: 16px;
+}
+
 .icon-md {
   width: 24px;
   height: 24px;
@@ -380,6 +385,7 @@ body {
 
 .header__image {
   height: 980px;
+  width: 1780px;
 }
 
 .underline-animation {
@@ -1848,6 +1854,7 @@ body {
 
   .header__image {
     height: 450px;
+    width: auto;
   }
 
   .nav__wrapper {

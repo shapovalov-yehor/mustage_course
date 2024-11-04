@@ -33,7 +33,7 @@
             </nav>
 
             <div class="header-round-block">
-              <img src="./assets/icons/translation.svg" alt="Translate icon" />
+              <img class="icon-md" src="./assets/icons/translation.svg" alt="Translate icon" />
               <button id="header_ru" class="button button__ghost" onclick="changeLanguage('ru')">RU</button>
               <button id="header_uk" class="button button__ghost button__ghost--active" onclick="changeLanguage('uk')">
                 UA
@@ -42,7 +42,7 @@
 
             <button class="button button__rounded" onclick="redirectClick();">
               <span data-i18n="header.write_to_us">Написати нам</span>
-              <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" />
+              <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" width="38px" height="38px" />
             </button>
           </div>
 
@@ -113,8 +113,9 @@
         <div class="header__image-container">
           <img
             class="header__image"
-            src="./assets/images/4de0a600-457d-4945-9f0a-57c716f037bc 1.png"
+            src="./assets/images/4de0a600-457d-4945-9f0a-57c716f037bc 1.webp"
             alt="Header image"
+            loading="lazy"
           />
         </div>
 
@@ -132,7 +133,7 @@
               </div>
 
               <div class="row gap-8">
-                <img src="./assets/icons/translation.svg" alt="Translate icon" />
+                <img class="icon-md" src="./assets/icons/translation.svg" alt="Translate icon" />
                 <button id="menu_ru" class="button button__ghost" onclick="changeLanguage('ru')">RU</button>
                 <button id="menu_uk" class="button button__ghost button__ghost--active" onclick="changeLanguage('uk')">
                   UA
@@ -142,7 +143,7 @@
 
             <button class="button button__rounded" onclick="redirectClick();">
               <span data-i18n="header.write_to_us">Написати нам</span>
-              <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" />
+              <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" width="38px" height="38px" />
             </button>
           </div>
 
@@ -523,7 +524,7 @@
               <div class="experience__general-panel-action">
                 <button class="button button__secondary" onclick="redirectClick();">
                   <div class="row row__align-center gap-8">
-                    <label data-i18n="experience.join">Хочу приєднатись</label>
+                    <strong data-i18n="experience.join">Хочу приєднатись</strong>
                     <i class="fi fi-sm fi-sr-arrow-right"></i>
                   </div>
                 </button>
@@ -561,7 +562,7 @@
                 </div>
 
                 <div class="column column__right">
-                  <img class="audience__card-image" src="./assets/images/DRIP_13.png" alt="Noob image" />
+                  <img class="audience__card-image" src="./assets/images/DRIP_13.webp" alt="Noob image" />
                 </div>
               </div>
 
@@ -588,7 +589,7 @@
                 </div>
 
                 <div class="column column__right">
-                  <img class="audience__card-image" src="./assets/images/DRIP_11.png" alt="Targetologist image" />
+                  <img class="audience__card-image" src="./assets/images/DRIP_11.webp" alt="Targetologist image" />
                 </div>
               </div>
 
@@ -611,7 +612,7 @@
                 </div>
 
                 <div class="column column__right">
-                  <img class="audience__card-image" src="./assets/images/DRIP_5.png" alt="Arbitrator image" />
+                  <img class="audience__card-image" src="./assets/images/DRIP_5.webp" alt="Arbitrator image" />
                 </div>
               </div>
 
@@ -636,7 +637,7 @@
                 <div class="column column__right">
                   <img
                     class="audience__card-image"
-                    src="./assets/images/DRIP_2.png"
+                    src="./assets/images/DRIP_2.webp"
                     alt="Victims of information image"
                   />
                 </div>
@@ -660,7 +661,7 @@
                 </div>
 
                 <div class="column column__right">
-                  <img class="audience__card-image" src="./assets/images/DRIP_17.png" alt="Student image" />
+                  <img class="audience__card-image" src="./assets/images/DRIP_17.webp" alt="Student image" />
                 </div>
               </div>
 
@@ -684,7 +685,7 @@
                 <div class="column column__right">
                   <img
                     class="audience__card-image"
-                    src="./assets/images/DRIP_13 (1).png"
+                    src="./assets/images/DRIP_13 (1).webp"
                     alt="To the young and ambitious image"
                   />
                 </div>
@@ -710,7 +711,7 @@
                 <div class="column column__right">
                   <img
                     class="audience__card-image"
-                    src="./assets/images/DRIP_7.png"
+                    src="./assets/images/DRIP_7.webp"
                     alt="SMM, content specialist image"
                   />
                 </div>
@@ -735,7 +736,7 @@
                 </div>
 
                 <div class="column column__right">
-                  <img class="audience__card-image" src="./assets/images/DRIP_14.png" alt="For a freelancer image" />
+                  <img class="audience__card-image" src="./assets/images/DRIP_14.webp" alt="For a freelancer image" />
                 </div>
               </div>
 
@@ -760,7 +761,7 @@
                 <div class="column column__right">
                   <img
                     class="audience__card-image"
-                    src="./assets/images/DRIP_18.png"
+                    src="./assets/images/DRIP_18.webp"
                     alt="Who's just kidding himself image"
                   />
                 </div>
@@ -1655,7 +1656,7 @@
                 </div>
 
                 <div class="slider__action">
-                  <button class="slider__button" onclick="moveToSlide(currentIndex - 1)">
+                  <button class="slider__button" onclick="moveToSlide(currentIndex - 1)" aria-label="Previos">
                     <i class="fi fi-xs fi-sr-angle-left"></i>
                   </button>
 
@@ -1669,7 +1670,7 @@
                     <span class="dot" onclick="moveToSlide(12)"></span>
                   </div>
 
-                  <button class="slider__button" onclick="moveToSlide(currentIndex + 1)">
+                  <button class="slider__button" onclick="moveToSlide(currentIndex + 1)" aria-label="Next">
                     <i class="fi fi-xs fi-sr-angle-right"></i>
                   </button>
                 </div>
@@ -1885,14 +1886,28 @@
                   <div class="column gap-8">
                     <label for="username" class="text-body-3" data-i18n="register.name">Введіть ім'я</label>
                     <div class="form__input-wrapper">
-                      <input type="text" id="username" name="username" placeholder="Ім'я" class="form__input" />
+                      <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Ім'я"
+                        class="form__input"
+                        autocomplete="name"
+                      />
                     </div>
                   </div>
 
                   <div class="column gap-8">
                     <label for="phone" class="text-body-3" data-i18n="register.phone">Введіть номер телефону</label>
                     <div class="form__input-wrapper">
-                      <input type="text" id="phone" name="phone" placeholder="+ 00 000 00 00 000" class="form__input" />
+                      <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        placeholder="+ 00 000 00 00 000"
+                        class="form__input"
+                        autocomplete="tel"
+                      />
                     </div>
                   </div>
 
@@ -1946,7 +1961,7 @@
 
               <button class="button button__rounded" onclick="redirectClick();">
                 <span data-i18n="header.write_to_us">Написать нам</span>
-                <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" />
+                <img src="./assets/icons/paper-plane.svg" alt="Paper plane icon" width="38px" height="38px" />
               </button>
             </div>
 
