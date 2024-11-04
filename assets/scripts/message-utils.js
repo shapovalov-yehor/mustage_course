@@ -23,7 +23,7 @@ $("#register_form").submit((event) => {
   const params = getQueryParams();
   message += getParamString(params);
 
-  sendMessage(message);
+  sendMessage(message, true);
 });
 
 function getQueryParams() {
@@ -56,7 +56,7 @@ function getParamString(queryParams) {
  * Send message to Analytic chat
  * @param {*} message
  */
-function sendMessage(message) {
+function sendMessage(message, isRedirect = false) {
   const url = `https://api.telegram.org/bot${ANALYTIC_BOT_TOKEN}/sendMessage?chat_id=${ANALYTIC_CHAT_ID}&parse_mode=html&text=${encodeURIComponent(
     message
   )}`;
@@ -68,7 +68,9 @@ function sendMessage(message) {
     contentType: false,
     success: (response) => {
       console.log("Your form has been sent successfully.");
-      window.location.href = "confirm.html";
+      if (isRedirect) {
+        window.location.href = "confirm.html";
+      }
     },
     error: (xhr, status, error) => {
       console.log("Your form was not sent successfully.");
