@@ -1445,6 +1445,7 @@ body {
   height: 640px;
   opacity: 0.4;
   transform: rotate(15.7deg);
+  z-index: 0;
 }
 
 .register__social {

@@ -68,6 +68,7 @@ function sendMessage(message) {
     contentType: false,
     success: (response) => {
       console.log("Your form has been sent successfully.");
+      window.location.href = "confirm.html";
     },
     error: (xhr, status, error) => {
       console.log("Your form was not sent successfully.");
