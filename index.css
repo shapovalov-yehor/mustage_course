@@ -1618,6 +1618,11 @@ body {
     display: none;
   }
 
+  .icon-md {
+    width: 16px;
+    height: 16px;
+  }
+
   .header {
     padding: 0px 16px;
   }
@@ -1688,7 +1693,6 @@ body {
 
   .header__info-item:last-child {
     grid-column: 1 / span 2;
-    /* width: fit-content; */
   }
 
   .header__info-item-title {
