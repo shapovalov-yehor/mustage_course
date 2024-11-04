@@ -403,6 +403,17 @@ body {
   left: 0;
 }
 
+.header__flash {
+  position: absolute;
+  height: 1125px;
+  width: 2030px;
+  right: 0;
+  top: 422px;
+  z-index: -1;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.8) 0%, rgba(13, 13, 13, 0) 100%);
+  backdrop-filter: blur(165px);
+}
+
 .text-medium {
   font-weight: 500;
 }
@@ -637,6 +648,17 @@ body {
 .advantage-action {
   display: flex;
   justify-content: center;
+}
+
+.advantage__flash {
+  position: absolute;
+  width: 2355px;
+  height: 1500px;
+  top: 550px;
+  right: -100px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.64) 0%, rgba(13, 13, 13, 0) 100%);
+  backdrop-filter: blur(190px);
+  z-index: -1;
 }
 
 .calculate {
@@ -884,6 +906,17 @@ body {
   padding-top: 40px;
 }
 
+.experience__flash {
+  position: absolute;
+  width: 2620px;
+  height: 1530px;
+  top: -1050px;
+  left: 100px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.64) 0%, rgba(13, 13, 13, 0) 100%);
+  backdrop-filter: blur(160px);
+  z-index: -1;
+}
+
 .audience {
   display: flex;
   flex-direction: column;
@@ -1012,6 +1045,17 @@ body {
   background: linear-gradient(96.85deg, #915eff 0%, #6732d9 100%);
 }
 
+.course_program-flash {
+  position: absolute;
+  width: 2190px;
+  height: 1510px;
+  top: -350px;
+  left: -600px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.64) 0%, rgba(13, 13, 13, 0) 100%);
+  backdrop-filter: blur(176px);
+  z-index: -1;
+}
+
 .tariff {
   display: flex;
   flex-direction: column;
@@ -1047,6 +1091,18 @@ body {
   padding-top: 6px;
   padding-right: 16px;
   color: #271351;
+}
+
+.tariff__flash {
+  position: absolute;
+  width: 1955px;
+  height: 1350px;
+  top: -400px;
+  left: 0;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.64) 0%, rgba(13, 13, 13, 0) 100%);
+  backdrop-filter: blur(167px);
+  border-radius: 1200px;
+  z-index: -1;
 }
 
 .students-result {
@@ -1553,6 +1609,18 @@ body {
   color: #0d0d0d;
 }
 
+.register__flash {
+  position: absolute;
+  width: 2400px;
+  height: 1625px;
+  top: -600px;
+  left: -400px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.72) 0%, rgba(13, 13, 13, 0) 100%);
+  backdrop-filter: blur(175px);
+  border-radius: 1200px;
+  z-index: -1;
+}
+
 .footer__wrapper {
   display: flex;
   flex-direction: row;
@@ -1785,6 +1853,15 @@ body {
     display: none;
   }
 
+  .header__flash {
+    height: 990px;
+    width: 625px;
+    right: inherit;
+    left: -215px;
+    top: 0px;
+    backdrop-filter: blur(115px);
+  }
+
   .article {
     margin-top: 60px;
     gap: 60px;
@@ -1832,6 +1909,13 @@ body {
   .advantage-item__image {
     width: 130px;
     height: 130px;
+  }
+
+  .advantage__flash {
+    width: 625px;
+    height: 1100px;
+    top: 1100px;
+    right: -50px;
   }
 
   .privilege {
@@ -1978,6 +2062,14 @@ body {
     height: 66px;
   }
 
+  .experience__flash {
+    width: 990px;
+    height: 765px;
+    top: -550px;
+    left: -230px;
+    backdrop-filter: blur(113px);
+  }
+
   .audience {
     gap: 40px;
     padding: 0px 16px;
@@ -2009,6 +2101,16 @@ body {
   .warning__content {
     padding: 0px;
     gap: 24px;
+  }
+
+  .background-radial-gradient {
+    left: inherit;
+    right: -300px;
+    top: -260px;
+    height: 635px;
+    width: 950px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.8) 0%, rgba(13, 13, 13, 0) 100%);
+    backdrop-filter: blur(107px);
   }
 
   .whom__wrapper {
@@ -2067,6 +2169,14 @@ body {
     border-radius: 18px;
   }
 
+  .course_program-flash {
+    width: 875px;
+    height: 940px;
+    top: -150px;
+    left: -350px;
+    backdrop-filter: blur(113px);
+  }
+
   .tariff {
     gap: 40px;
     padding: 0px 16px;
@@ -2085,6 +2195,15 @@ body {
 
   .tariff__card-list {
     gap: 12px;
+  }
+
+  .tariff__flash {
+    width: 875px;
+    height: 940px;
+    top: -300px;
+    left: -150px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.8) 0%, rgba(13, 13, 13, 0) 100%);
+    backdrop-filter: blur(113px);
   }
 
   .register__wrapper {
@@ -2278,6 +2397,15 @@ body {
   .footer__wrapper {
     justify-content: flex-start;
     align-items: flex-start;
+  }
+
+  .register__flash {
+    width: 875px;
+    height: 1040px;
+    top: -400px;
+    left: -300px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.8) 0%, rgba(13, 13, 13, 0) 100%);
+    backdrop-filter: blur(113px);
   }
 
   .footer {
