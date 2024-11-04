@@ -1086,6 +1086,44 @@ body {
   max-width: 770px;
 }
 
+.expanded {
+  gap: 0px !important;
+}
+
+.expanded__header {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+.expanded__content {
+  margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.expanded__content--opening {
+  margin-top: 24px;
+}
+
+.expanded__icon {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transition: all 0.5s ease;
+}
+
+.expanded__icon--opening {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
 .slider {
   display: flex;
   flex-direction: column;
@@ -2106,6 +2144,10 @@ body {
 
   .answer__card-description {
     max-width: 100%;
+  }
+
+  .expanded__content--opening {
+    margin-top: 16px;
   }
 
   .spinner__wrapper {

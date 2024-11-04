@@ -262,6 +262,8 @@ spinner.addEventListener("transitionend", () => {
   trigger.disabled = false;
 });
 
+// Menu
+
 const menuModal = document.getElementById("menu");
 const openModalBtn = document.getElementById("menu-open");
 const closeModal = document.getElementById("menu-close");
@@ -294,3 +296,24 @@ function closeMenu() {
   openModalBtn.style.display = "flex";
   document.body.style.overflow = "";
 }
+
+// Expanded panels
+
+const panels = document.querySelectorAll(".expanded");
+
+panels.forEach((panel) => {
+  const header = panel.querySelector(".expanded__header");
+  const content = panel.querySelector(".expanded__content");
+  const icon = header.querySelector("i");
+
+  header.addEventListener("click", function () {
+    content.classList.toggle("expanded__content--opening");
+    icon.classList.toggle("expanded__icon--opening");
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
