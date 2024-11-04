@@ -413,9 +413,9 @@ body {
 .header__flash {
   position: absolute;
   height: 1125px;
-  width: 2030px;
+  width: calc(100% - 620px);
   right: 0;
-  top: 422px;
+  top: 350px;
   z-index: -1;
   background: radial-gradient(50% 50% at 50% 50%, rgba(103, 50, 217, 0.8) 0%, rgba(13, 13, 13, 0) 100%);
   backdrop-filter: blur(165px);
@@ -1862,11 +1862,11 @@ body {
   }
 
   .header__flash {
-    height: 990px;
-    width: 625px;
+    height: calc(100vw + 360px);
+    width: 100%;
     right: inherit;
-    left: -215px;
-    top: 0px;
+    margin-left: -118px;
+    top: 200px;
     backdrop-filter: blur(115px);
   }
 
