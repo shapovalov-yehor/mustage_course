@@ -117,6 +117,7 @@ body {
   align-items: center;
   margin-top: 120px;
   gap: 120px;
+  overflow: hidden;
 }
 
 .background-radial-gradient {
