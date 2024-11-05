@@ -2496,6 +2496,11 @@ body {
     margin-right: 240px;
   }
 
+  .advantage-item__image-wrapper {
+    top: inherit;
+    bottom: -25px;
+  }
+
   .privilege {
     padding: 0px 16px;
   }

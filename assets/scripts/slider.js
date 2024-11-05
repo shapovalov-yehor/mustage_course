@@ -118,3 +118,55 @@ modal.addEventListener("click", function (e) {
     modal.style.display = "none";
   }
 });
+
+/** SWIPE */
+
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+
+sliderWrapper.addEventListener("touchstart", startDrag);
+sliderWrapper.addEventListener("touchmove", drag);
+sliderWrapper.addEventListener("touchend", endDrag);
+
+function getPositionX(event) {
+  return event.touches[0].clientX;
+}
+
+function startDrag(event) {
+  isDragging = true;
+  startPos = getPositionX(event);
+  sliderWrapper.style.transition = "none";
+}
+
+function drag(event) {
+  if (!isDragging) {
+    return;
+  }
+
+  const widthContainer = window.innerWidth / 2;
+  const widthActiveSlide = 260;
+  const widthUnActiveSlide = 165;
+  const translateX = widthContainer - (widthActiveSlide / 2 + widthUnActiveSlide * currentIndex);
+  prevTranslate = translateX;
+
+  const currentPosition = getPositionX(event);
+  currentTranslate = translateX + (currentPosition - startPos);
+  sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
+}
+
+function endDrag() {
+  isDragging = false;
+  const movedBy = currentTranslate - prevTranslate;
+
+  if (movedBy < -75) {
+    currentIndex += 1;
+  }
+
+  if (movedBy > 75) {
+    currentIndex -= 1;
+  }
+
+  moveToSlide(currentIndex);
+}
