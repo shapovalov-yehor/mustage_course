@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #0d0d0d;
   color: #f7f7f7;
@@ -1752,8 +1756,8 @@ body {
   }
 
   .text-body-3 {
-    font-size: 12px;
-    line-height: 14.63px;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   .divider--hidden {

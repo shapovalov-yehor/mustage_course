@@ -1887,6 +1887,7 @@
                     <label for="username" class="text-body-3" data-i18n="register.name">Введіть ім'я</label>
                     <div class="form__input-wrapper">
                       <input
+                        required
                         type="text"
                         id="username"
                         name="username"
@@ -1901,6 +1902,7 @@
                     <label for="phone" class="text-body-3" data-i18n="register.phone">Введіть номер телефону</label>
                     <div class="form__input-wrapper">
                       <input
+                        required
                         type="text"
                         id="phone"
                         name="phone"
@@ -1914,7 +1916,14 @@
                   <div class="column gap-8">
                     <label for="nickname" class="text-body-3" data-i18n="register.tg">Введіть нікнейм у Телеграм</label>
                     <div class="form__input-wrapper">
-                      <input type="text" id="nickname" name="nickname" placeholder="@nickname" class="form__input" />
+                      <input
+                        required
+                        type="text"
+                        id="nickname"
+                        name="nickname"
+                        placeholder="@nickname"
+                        class="form__input"
+                      />
                     </div>
                   </div>
                 </div>
@@ -2015,6 +2024,7 @@
     <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
 
     <script src="./assets/scripts/i18n.js"></script>
+    <script src="./assets/scripts/slider.js"></script>
     <script src="./assets/scripts/index.js"></script>
     <script src="./assets/scripts/message-utils.js"></script>
   </body>
