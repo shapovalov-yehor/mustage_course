@@ -1,4 +1,5 @@
 const sliderWrapper = document.querySelector(".slider-wrapper");
+const sliderContent = document.querySelector(".slider-2");
 const slides = document.querySelectorAll(".slide");
 let currentIndex = 7;
 
@@ -16,7 +17,7 @@ moveToSlide(currentIndex);
 
 function moveToSlide(index) {
   const windowWidth = window.innerWidth;
-  const isSmallDimension = windowWidth > 320 && windowWidth < 992;
+  const isSmallDimension = windowWidth > 320 && windowWidth < 1024;
 
   updatedSlides.forEach((slide, i) => {
     slide.classList.remove("active");
@@ -36,13 +37,13 @@ function moveToSlide(index) {
     }
   });
 
-  const widthContainer = isSmallDimension ? windowWidth : 705;
+  const widthContainer = isSmallDimension ? windowWidth / 2 : sliderContent.clientWidth / 2;
   const widthActiveSlide = isSmallDimension ? 260 : 320;
   const widthUnActiveSlide = isSmallDimension ? 165 : 240;
   const countLeftSlide = isSmallDimension ? index : index - 1;
 
   const translateX = isSmallDimension
-    ? widthContainer / 2 - (widthActiveSlide / 2 + widthUnActiveSlide * countLeftSlide)
+    ? widthContainer - (widthActiveSlide / 2 + widthUnActiveSlide * countLeftSlide)
     : widthContainer - (widthActiveSlide + widthActiveSlide / 2 + widthUnActiveSlide * countLeftSlide);
 
   sliderWrapper.style.transform = `translateX(${translateX}px)`;
