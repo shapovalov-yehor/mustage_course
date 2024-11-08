@@ -1,14 +1,24 @@
 const ANALYTIC_BOT_TOKEN = "7766125760:AAENa5zIjyAQu3UOeP7BBgooRw2DYeiRPSI";
 const ANALYTIC_CHAT_ID = "-1002190658740";
-const MANAGER_CHAT_URL = "https://t.me/+0_xlpcPuNYE5MTAy";
+const MANAGER_CHAT_URL = "http://t.me/mustage_manager";
+const ACADEMY_BOT_URL = "https://t.me/mustage_academy_bot";
 
-function redirectClick() {
+function redirectToChatClick() {
+  const params = getQueryParams();
+  let message = "<b>Пользователь перешёл в чат:</b>\n";
+  message += getParamString(params);
+
+  sendMessage(message);
+  redirectTo(MANAGER_CHAT_URL, params.refId);
+}
+
+function redirectToBotClick() {
   const params = getQueryParams();
   let message = "<b>Пользователь перешёл в бот:</b>\n";
   message += getParamString(params);
 
   sendMessage(message);
-  redirectToChat(params.refId);
+  redirectTo(ACADEMY_BOT_URL, params.refId);
 }
 
 $("#register_form").submit((event) => {
@@ -38,7 +48,6 @@ function getQueryParams() {
   params.sub6 = searchParams.get("sub6");
   params.sub7 = searchParams.get("sub7");
   params.sub8 = searchParams.get("sub8");
-  console.log(params);
   return params;
 }
 
@@ -67,7 +76,6 @@ function sendMessage(message, isRedirect = false) {
     processData: false,
     contentType: false,
     success: (response) => {
-      console.log("Your form has been sent successfully.");
       if (isRedirect) {
         window.location.href = "confirm.html";
       }
@@ -81,9 +89,10 @@ function sendMessage(message, isRedirect = false) {
 
 /**
  * Redirect user to Manager chat
+ * @param {*} url
  * @param {*} refId
  */
-function redirectToChat(refId = undefined) {
+function redirectTo(url, refId = undefined) {
   const params = refId ? `?start=${refId}` : "";
-  window.location.href = MANAGER_CHAT_URL + params;
+  window.location.href = url + params;
 }

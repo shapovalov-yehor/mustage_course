@@ -1705,6 +1705,7 @@ body {
   background: linear-gradient(96.85deg, #323232 0%, #1f1f1f 100%);
   border: 2px solid #f7f7f7;
   transition: all 300ms ease-out;
+  cursor: pointer;
 }
 
 .part-pay:hover {
