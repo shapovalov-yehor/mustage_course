@@ -491,6 +491,10 @@ body {
   color: #915eff;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 .divider {
   border-bottom: 1px solid #f7f7f7;
   width: 100%;
@@ -1090,6 +1094,21 @@ body {
   background: linear-gradient(96.85deg, #915eff 0%, #6732d9 100%);
 }
 
+.tariff__card-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 24px;
+  gap: 10px;
+  border-radius: 24px;
+  background: #f7f7f726;
+  font-family: "Montserrat", serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 42px;
+  width: fit-content;
+}
+
 .tariff__card-list {
   display: flex;
   flex-direction: column;
@@ -1677,6 +1696,33 @@ body {
   gap: 32px;
 }
 
+.part-pay {
+  display: flex;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 40px;
+  border-radius: 24px;
+  background: linear-gradient(96.85deg, #323232 0%, #1f1f1f 100%);
+  border: 2px solid #f7f7f7;
+  transition: all 300ms ease-out;
+}
+
+.part-pay:hover {
+  border: 2px solid #915eff;
+  background: radial-gradient(100% 116.67% at 0% 100%, #5424bd 0%, #1f1f1f 70.04%);
+}
+
+.part-pay__icons {
+  display: flex;
+  gap: 16px;
+}
+
+.part-pay__icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
   .fi {
     width: 20px;
@@ -1724,7 +1770,7 @@ body {
 
   .text-body-3 {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 21px;
   }
 
   .divider--hidden {
@@ -2172,6 +2218,12 @@ body {
     border-radius: 24px;
   }
 
+  .tariff__card-title {
+    border-radius: 16px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
   .tariff__card-list {
     gap: 12px;
   }
@@ -2413,6 +2465,28 @@ body {
   .footer__nav-title {
     font-size: 16px;
     line-height: 19.5px;
+  }
+
+  .part-pay__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .part-pay {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 24px;
+    border-radius: 24px;
+  }
+
+  .part-pay__icons {
+    gap: 8px;
+  }
+
+  .part-pay__icon {
+    width: 48px;
+    height: 48px;
   }
 }
 

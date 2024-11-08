@@ -442,6 +442,18 @@
                   </span>
                 </div>
               </div>
+
+              <div class="part-pay">
+                <span class="text-body-2 text-bold text-underline">Можлива оплата частинами</span>
+
+                <div class="part-pay__icons">
+                  <img class="part-pay__icon" src="./assets/icons/Frame 294.svg" alt="Privat bank" />
+                  <img class="part-pay__icon" src="./assets/icons/Frame 292.svg" alt="Monobank" />
+                  <img class="part-pay__icon" src="./assets/icons/Frame 293.svg" alt="A bank" />
+                  <img class="part-pay__icon" src="./assets/icons/Frame 295.svg" alt="OTP" />
+                  <img class="part-pay__icon" src="./assets/icons/Frame 296.svg" alt="Image" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -1422,7 +1434,9 @@
             <div class="tariff__list">
               <div class="tariff__card">
                 <div class="column gap-16">
-                  <span class="text-headline-3" data-i18n="tariff.free.title">Безкоштовний</span>
+                  <span class="tariff__card-title" data-i18n="tariff.free.title">Безкоштовний</span>
+
+                  <span class="text-headline-1">$0</span>
 
                   <div class="divider"></div>
 
@@ -1441,11 +1455,17 @@
                     </li>
                   </ul>
                 </div>
+
+                <button class="button button__secondary row__center" onclick="redirectClick();">
+                  <span data-i18n="tariff.price">Придбати</span>
+                </button>
               </div>
 
               <div class="tariff__card">
                 <div class="column gap-16">
-                  <span class="text-headline-3" data-i18n="tariff.start.title"> Стартовий </span>
+                  <span class="tariff__card-title" data-i18n="tariff.start.title"> Стартовий </span>
+
+                  <span class="text-headline-1">$199</span>
 
                   <div class="divider"></div>
 
@@ -1472,13 +1492,15 @@
                 </div>
 
                 <button class="button button__secondary row__center" onclick="redirectClick();">
-                  <span data-i18n="tariff.price">Дізнатися ціну</span>
+                  <span data-i18n="tariff.price">Придбати</span>
                 </button>
               </div>
 
               <div class="tariff__card">
                 <div class="column gap-16">
-                  <span class="text-headline-3" data-i18n="tariff.base.title">Базовий</span>
+                  <span class="tariff__card-title" data-i18n="tariff.base.title">Базовий</span>
+
+                  <span class="text-headline-1">$299</span>
 
                   <div class="divider"></div>
 
@@ -1502,13 +1524,15 @@
                 </div>
 
                 <button class="button button__secondary row__center" onclick="redirectClick();">
-                  <span data-i18n="tariff.price">Дізнатися ціну</span>
+                  <span data-i18n="tariff.price">Придбати</span>
                 </button>
               </div>
 
               <div class="tariff__card">
                 <div class="column gap-16">
-                  <span class="text-headline-3" data-i18n="tariff.pro.title">Pro</span>
+                  <span class="tariff__card-title" data-i18n="tariff.pro.title">Pro</span>
+
+                  <span class="text-headline-1">$399</span>
 
                   <div class="divider"></div>
 
@@ -1529,8 +1553,22 @@
                 </div>
 
                 <button class="button button__secondary row__center" onclick="redirectClick();">
-                  <span data-i18n="tariff.price">Дізнатися ціну</span>
+                  <span data-i18n="tariff.price">Придбати</span>
                 </button>
+              </div>
+            </div>
+
+            <div class="row part-pay__wrapper">
+              <div class="part-pay">
+                <span class="text-body-2 text-bold text-underline">Можлива оплата частинами</span>
+
+                <div class="part-pay__icons">
+                  <img class="part-pay__icon" src="./assets/icons/Frame 294.svg" alt="Privat bank" />
+                  <img class="part-pay__icon" src="./assets/icons/Frame 292.svg" alt="Monobank" />
+                  <img class="part-pay__icon" src="./assets/icons/Frame 293.svg" alt="A bank" />
+                  <img class="part-pay__icon" src="./assets/icons/Frame 295.svg" alt="OTP" />
+                  <img class="part-pay__icon" src="./assets/icons/Frame 296.svg" alt="Image" />
+                </div>
               </div>
             </div>
 
