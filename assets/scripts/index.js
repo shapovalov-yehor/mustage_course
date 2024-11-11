@@ -197,3 +197,14 @@ panels.forEach((panel) => {
     }
   });
 });
+
+const languageMenuButton = document.getElementById("languageMenuButton");
+const languageMenu = document.getElementById("languageMenu");
+
+languageMenuButton.addEventListener("click", function () {
+  languageMenu.classList.toggle("drop-menu--active");
+});
+
+languageMenu.addEventListener("click", function () {
+  languageMenu.classList.toggle("drop-menu--active");
+});

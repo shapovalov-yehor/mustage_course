@@ -32,12 +32,22 @@
               <a href="#faq" class="nav__link" data-i18n="nav.faq">FAQ</a>
             </nav>
 
-            <div class="header-round-block">
-              <img class="icon-md" src="./assets/icons/translation.svg" alt="Translate icon" />
-              <button id="header_ru" class="button button__ghost" onclick="changeLanguage('ru')">RU</button>
-              <button id="header_uk" class="button button__ghost button__ghost--active" onclick="changeLanguage('uk')">
-                UA
-              </button>
+            <div class="relative">
+              <div id="languageMenuButton" class="header-round-block" style="cursor: pointer">
+                <img class="icon-md" src="./assets/icons/translation.svg" alt="Translate icon" />
+                <i class="fi fi-sr-angle-small-down"></i>
+              </div>
+
+              <div id="languageMenu" class="header-round-block drop-menu">
+                <button id="header_ru" class="button button__ghost" onclick="changeLanguage('ru')">RU</button>
+                <button
+                  id="header_uk"
+                  class="button button__ghost button__ghost--active"
+                  onclick="changeLanguage('uk')"
+                >
+                  UA
+                </button>
+              </div>
             </div>
 
             <button class="button button__rounded" onclick="redirectToChatClick();">
